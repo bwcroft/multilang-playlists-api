@@ -23,10 +23,13 @@ All data is stored in memory or flat files — no database needed.
 
 ## 🌐 Languages Implemented
 
-- [] C
-- [] Deno
-- [] Go
-- [] Node
-- [] Python
-- [] Rust
-- [] Zig
+- [0] C
+- [0] C++
+- [0] Deno
+- [0] Go
+- [0] Java
+- [0] Node
+- [0] OCaml
+- [0] Python
+- [0] Rust
+- [0] Zig
