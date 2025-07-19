@@ -1,0 +1,11 @@
+{
+  "name": "playlists-api",
+  "version": "1.0.0",
+  "description": "Playlist Api",
+  "main": "src/index.js",
+  "license": "ISC",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
