@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Folk",
+    "slug": "folk",
+    "description": "Traditional and contemporary folk music with acoustic instrumentation and storytelling lyrics.",
+    "tags": ["acoustic", "traditional", "storytelling"]
+  },
+  {
+    "id": 2,
+    "name": "Guitar",
+    "slug": "guitar",
+    "description": "Instrumental and performance-focused music featuring guitar as the primary instrument.",
+    "tags": ["instrumental", "acoustic", "electric", "solo"]
+  },
+  {
+    "id": 3,
+    "name": "Country",
+    "slug": "country",
+    "description": "A genre rooted in southern American traditions, featuring instruments like guitar, banjo, and fiddle.",
+    "tags": ["americana", "bluegrass", "storytelling"]
+  }
+]

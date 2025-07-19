@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Acoustic Guitar",
+    "filename": "acoustic-guitar",
+    "mimetype": "audio/mpeg",
+    "directory": "_audio",
+    "format": "mp3",
+    "size": "1941002"
+  },
+  {
+    "id": 2,
+    "name": "Country One",
+    "filename": "country-one",
+    "mimetype": "audio/mpeg",
+    "directory": "_audio",
+    "format": "mp3",
+    "size": "1735366"
+  },
+  {
+    "id": 3,
+    "name": "Country Two",
+    "filename": "country-two",
+    "mimetype": "audio/mpeg",
+    "directory": "_audio",
+    "format": "mp3",
+    "size": "4559934"
+  },
+  {
+    "id": 4,
+    "name": "Folk One",
+    "filename": "folk-one",
+    "mimetype": "audio/mpeg",
+    "directory": "_audio",
+    "format": "mp3",
+    "size": "4057344"
+  },
+  {
+    "id": 5,
+    "name": "Folk Two",
+    "filename": "folk-two",
+    "mimetype": "audio/mpeg",
+    "directory": "_audio",
+    "format": "mp3",
+    "size": "3054445"
+  }
+]
