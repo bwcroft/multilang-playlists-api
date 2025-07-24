@@ -1,3 +1,4 @@
+import http from 'http'
 import { RouterNode } from './RouterNode.js'
 
 export class Router {
@@ -72,17 +73,16 @@ export class Router {
     }
 
     try {
-      if (!this.root.has(method)) {
-        return null
-      }
-
       const segments = this._splitPath(path)
-      let node = this.root.get(method)
       let params = {}
-      
+
+      let node = this.root.get(method)
+      if (!node) return null
+
       for (const segment of segments) {
-        if (node.children.has(segment)) {
-          node = node.children.get(segment)
+        const segnode = node.children.get(segment) 
+        if (segnode) {
+          node = segnode
         } else if (node.paramName && node.paramChild) {
           params[node.paramName] = segment
           node = node.paramChild
@@ -102,6 +102,20 @@ export class Router {
     } finally {
       return response
     }
+  }
+
+  _createServer() {
+    return http.createServer((req, res) => {
+      const { pathname } = new URL(req.url, `http://${req.headers.host}`)
+      const route = this._match(req.method, pathname)
+
+      if (route.valid) {
+        route.handler(req, res, { params: route.params })
+      } else {
+        res.writeHead(404, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Not found' }));
+      }
+    })
   }
 
   /**
@@ -142,5 +156,9 @@ export class Router {
    */
   delete(path, handler) {
     this._add('DELETE', path, handler)
+  }
+
+  listen(port, callback) {
+    this._createServer().listen(port, callback)
   }
 }

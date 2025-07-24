@@ -14,27 +14,27 @@ router.get('/', (req, res) => {
 
 router.get('/genres', (req, res) => {
   res.writeHead(200, { 'Content-Type': 'application/json' });
-  res.end(JSON.stringify({}));
+  res.end(JSON.stringify([]));
 })
 
-router.get('/genres/:id', (req, res) => {
+router.get('/genres/:id', (req, res, { params }) => {
   res.writeHead(200, { 'Content-Type': 'application/json' });
-  res.end(JSON.stringify({}));
+  res.end(JSON.stringify(params));
 })
 
-router.get('/genres/:id/music', (req, res) => {
+router.get('/genres/:id/music', (req, res, { params }) => {
   res.writeHead(200, { 'Content-Type': 'application/json' });
-  res.end(JSON.stringify({}));
+  res.end(JSON.stringify(params));
 })
 
 router.get('/music', (req, res) => {
   res.writeHead(200, { 'Content-Type': 'application/json' });
-  res.end(JSON.stringify({}));
+  res.end(JSON.stringify([]));
 })
 
-router.get('/music/:id', (req, res) => {
+router.get('/music/:id', (req, res, { params }) => {
   res.writeHead(200, { 'Content-Type': 'application/json' });
-  res.end(JSON.stringify({}));
+  res.end(JSON.stringify(params));
 })
 
 export default router 
